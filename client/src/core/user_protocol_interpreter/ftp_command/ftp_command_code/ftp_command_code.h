@@ -89,11 +89,10 @@ class FtpCommandCode {
  public:
   bool IsValid() const;
 
-  FtpCommandCode::Enum ToEnum() const;
-  std::string ToString() const;
-
-  std::string Rfc() const;
-  std::string Description() const;
+  FtpCommandCode::Enum GetEnum() const;
+  std::string GetString() const;
+  std::string GetRfc() const;
+  std::string GetDescription() const;
 
  private:
   FtpCommandCode::Enum enum_;

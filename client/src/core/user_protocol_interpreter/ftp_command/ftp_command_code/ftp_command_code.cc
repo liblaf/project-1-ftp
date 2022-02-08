@@ -51,18 +51,22 @@ FtpCommandCode::FtpCommandCode(const std::string &new_command) {
   this->description_ = EnumToDescription()->Value(this->enum_);
 }
 
-FtpCommandCode::operator FtpCommandCode::Enum() const { return this->ToEnum(); }
+FtpCommandCode::operator FtpCommandCode::Enum() const {
+  return this->GetEnum();
+}
 
-FtpCommandCode::operator std::string() const { return this->ToString(); }
+FtpCommandCode::operator std::string() const { return this->GetString(); }
 
 bool FtpCommandCode::IsValid() const {
   return this->enum_ != FtpCommandCode::kUnknownFtpCommandCode;
 }
 
-FtpCommandCode::Enum FtpCommandCode::ToEnum() const { return this->enum_; }
+FtpCommandCode::Enum FtpCommandCode::GetEnum() const { return this->enum_; }
 
-std::string FtpCommandCode::ToString() const { return this->string_; }
+std::string FtpCommandCode::GetString() const { return this->string_; }
 
-std::string FtpCommandCode::Rfc() const { return this->rfc_; }
+std::string FtpCommandCode::GetRfc() const { return this->rfc_; }
 
-std::string FtpCommandCode::Description() const { return this->description_; }
+std::string FtpCommandCode::GetDescription() const {
+  return this->description_;
+}
