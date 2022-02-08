@@ -15,7 +15,7 @@ FtpCommand::FtpCommand(const std::string &new_command) {
     this->argument_ = match[2].str();
   } else {
     this->code_ = FtpCommand::CodeType::kUnknownFtpCommandCode;
-    this->argument_ = "";
+    this->argument_ = FtpCommand::ArgumentType();
   }
 }
 

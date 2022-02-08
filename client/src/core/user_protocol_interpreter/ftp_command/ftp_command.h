@@ -12,8 +12,7 @@ class FtpCommand {
   using ArgumentType = FtpCommandArgument;
 
  public:
-  FtpCommand(const FtpCommand::CodeType& new_code =
-                 FtpCommand::CodeType::kUnknownFtpCommandCode,
+  FtpCommand(const FtpCommand::CodeType& new_code = FtpCommand::CodeType(),
              const FtpCommand::ArgumentType& new_argument =
                  FtpCommand::ArgumentType());
   FtpCommand(const std::string& new_command);
