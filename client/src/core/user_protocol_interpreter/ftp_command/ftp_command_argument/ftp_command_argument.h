@@ -7,7 +7,8 @@ class FtpCommandArgument : public std::string {
  public:
   FtpCommandArgument();
   FtpCommandArgument(const std::string& new_argument);
-  FtpCommandArgument(const char* new_argument, const int length = -1);
+  FtpCommandArgument(const char* new_argument);
+  FtpCommandArgument(const char* new_argument, std::string::size_type length);
   operator const char*() const;
 
  public:
