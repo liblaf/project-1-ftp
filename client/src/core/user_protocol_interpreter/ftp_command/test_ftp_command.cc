@@ -29,9 +29,9 @@ TEST(TestFtpCommand, TestInvalidString) {
 TEST(TestFtpCommand, TestValidToString) {
   char output[] = "ABOR ab12\0\r\n";
   char argument[] = "ab12\0";
-  auto command =
-      FtpCommand(FtpCommand::CodeType::kAbor,
-                 std::string(argument, sizeof(argument) - sizeof(char)));
+  auto command = FtpCommand(
+      FtpCommand::CodeType::kAbor,
+      FtpCommand::ArgumentType(argument, sizeof(argument) - sizeof(char)));
   EXPECT_EQ(command.GetString(),
             std::string(output, sizeof(output) - sizeof(char)));
 }
