@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+
 add_subdirectory(ftp_command_code)
 add_subdirectory(ftp_command_argument)
 
