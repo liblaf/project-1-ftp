@@ -1,4 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "clangd.path": "clangd-14"
+    "clangd.path": "clangd-14",
+    "C_Cpp.clang_format_path": "clang-format-14"
 }
